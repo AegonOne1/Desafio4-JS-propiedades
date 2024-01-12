@@ -1,4 +1,4 @@
-import prop_ventas from './prop_ventas.js'
+import {prop_ventas} from './prop_ventas.js'
 // console.log(prop_ventas)
 import prop_alquiler from './prop_alquiler.js'
 // console.log(prop_alquiler)
@@ -31,33 +31,54 @@ function createArchiveprop(propiedad) {
     return archivo
 }
 
-function showIndex(propiedades, tipo) {
+function showIndex(propiedades, tipo, limite) {
+    // console.log(propiedades, tipo, limite)
+    console.log(propiedades.length)
     const lista = document.getElementById(`propiedades-${tipo}-lista`);
-    
-    for (let i = 0; i < 3 ; i++) {
-        const propiedad = propiedades[i];
-        const elementoPropiedad = createArchiveprop(propiedad);
-        // console.log(elementoPropiedad)
-        lista.appendChild(elementoPropiedad);
+    if(limite){
+        for (let i = 0; i < 3 ; i++) {
+            const propiedad = propiedades[i];
+            const elementoPropiedad = createArchiveprop(propiedad);
+            // console.log(elementoPropiedad)
+            lista.appendChild(elementoPropiedad);
+        }
+    }else {
+        for (let i = 0; i < propiedades.length ; i++) {
+            const propiedad = propiedades[i];
+            const elementoPropiedad = createArchiveprop(propiedad);
+            // console.log(elementoPropiedad)
+            lista.appendChild(elementoPropiedad);
+        }
     }
+    
 }
 
-const vistaActual = document.querySelector('main')
+const vistaActual = document.querySelector('main').id
+// console.log(vistaActual)
+
+if(vistaActual === 'index-view'){
+
+    showIndex(prop_ventas, 'venta', true)
+    showIndex(prop_alquiler, 'alquiler', true)
+
+} else if (vistaActual === 'ventas-view'){
+
+    showIndex(prop_ventas, 'venta', false)
+
+} else if (vistaActual === 'alquiler-view'){
+    
+    showIndex(prop_alquiler, 'alquiler', false)
+}
+
 // if(ventas-view > 0 ) muestra solo prop_ventas sin limite
 // else if (index-view === 0)  muestra prop_ventas y alquiler solo 3
-// else (alquiler-view < 0) muestra solo prop_alquiler sin limite
-showIndex(prop_ventas, 'venta');
-showIndex(prop_alquiler, 'alquiler');
+// else if (alquiler-view < 0) muestra solo prop_alquiler sin limite
 
-console.log(window.location)
+
+// console.log(window.location)
 /*
-1- primero escoger el metodo que vamos a utilizar para saber en que html estamos
-2- una vez elegido el metodo definir que se va arealizar con la funcion showIndex
+1- primero escoger el metodo que vamos a utilizar para saber en que html estamos check!!
+2- una vez elegido el metodo definir que se va arealizar con la funcion showIndex check!!!
 3- liberar limite de mostrar solo 3 de la funcion showIndex
 4- utilizar una funcion diferente a showIndex para liberar el limite (opcional)
-
-
-
-
-
 */

@@ -31,7 +31,29 @@ const prop_alquiler = [
         costo: 2200,
         smoke: false,
         pets: false
-    }
+    },
+    {
+        nombre: 'Condominio moderno en zona residencial',
+        src: 'https://images.unsplash.com/photo-1567496898669-ee935f5f647a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbmRvfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
+        descripcion: 'Este elegante condominio moderno está ubicado en una tranquila zona residencial',
+        ubicacion: '123 Main Street, Anytown, CA 91234',
+        habitaciones: 2,
+        banos: 2,
+        costo: 2200,
+        smoke: false,
+        pets: false
+    },
+    {
+        nombre: 'Condominio moderno en zona residencial',
+        src: 'https://images.unsplash.com/photo-1567496898669-ee935f5f647a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbmRvfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
+        descripcion: 'Este elegante condominio moderno está ubicado en una tranquila zona residencial',
+        ubicacion: '123 Main Street, Anytown, CA 91234',
+        habitaciones: 2,
+        banos: 2,
+        costo: 2200,
+        smoke: false,
+        pets: false
+    },
     // Puedes agregar más propiedades aquí si lo deseas
 ]
 
