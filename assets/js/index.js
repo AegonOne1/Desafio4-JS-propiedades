@@ -1,5 +1,5 @@
 import {prop_ventas} from './prop_ventas.js'
-// console.log(prop_ventas)
+console.log(prop_ventas)
 import prop_alquiler from './prop_alquiler.js'
 // console.log(prop_alquiler)
 
